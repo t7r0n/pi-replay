@@ -1,2 +1,0 @@
-[console_scripts]
-pi-replay = pi_replay.cli:main
