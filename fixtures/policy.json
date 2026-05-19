@@ -1,0 +1,18 @@
+{
+  "company": "camelAI",
+  "repo": "pi-replay",
+  "metrics": [
+    "worker_coverage",
+    "lives_risk",
+    "isolation_precision",
+    "observability_latency"
+  ],
+  "failure_modes": [
+    "worker_drift",
+    "lives_gap",
+    "isolation_misroute",
+    "observability_blindspot"
+  ],
+  "minimum_cases": 144,
+  "requires_evidence_markers": true
+}

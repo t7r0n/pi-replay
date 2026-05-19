@@ -1,0 +1,7 @@
+scenario,cases,blocks,reviews,mean_severity,mean_score,top_evidence_id,recommended_action
+isolation failure replay,24,2,4,3.333,0.543,ev_0044,block release until replay is understood
+lives gap,24,3,2,3.333,0.5232,ev_0143,block release until replay is understood
+lives reviewer handoff,24,2,4,2.583,0.4237,ev_0121,block release until replay is understood
+observability policy boundary,24,2,3,1.708,0.2651,ev_0099,block release until replay is understood
+worker drift,24,2,3,2.5,0.4057,ev_0088,block release until replay is understood
+worker evidence recall,24,3,3,1.875,0.282,ev_0066,block release until replay is understood
