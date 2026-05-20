@@ -1,6 +1,6 @@
 # Operator Brief: camelAI
 
-camelAI gets a local, deterministic pressure test around worker, lives, and isolation. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action.
+camelAI gets a local, deterministic pressure test around worker, lives, and isolation. The useful part is the repeatable evidence path from fixture to failure to operator action.
 
 ## Highest-leverage checks
 
