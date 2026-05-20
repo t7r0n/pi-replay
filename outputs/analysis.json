@@ -9,74 +9,54 @@
   },
   "clusters": [
     {
-      "scenario": "isolation failure replay",
-      "cases": 24,
-      "blocks": 2,
-      "reviews": 4,
-      "mean_severity": 3.333,
-      "mean_score": 0.543,
-      "top_evidence_id": "ev_0044",
-      "recommended_action": "block release until replay is understood"
-    },
-    {
-      "scenario": "lives gap",
-      "cases": 24,
+      "scenario": "isolation regression harness",
+      "cases": 36,
       "blocks": 3,
-      "reviews": 2,
-      "mean_severity": 3.333,
-      "mean_score": 0.5232,
-      "top_evidence_id": "ev_0143",
-      "recommended_action": "block release until replay is understood"
-    },
-    {
-      "scenario": "lives reviewer handoff",
-      "cases": 24,
-      "blocks": 2,
-      "reviews": 4,
-      "mean_severity": 2.583,
-      "mean_score": 0.4237,
-      "top_evidence_id": "ev_0121",
-      "recommended_action": "block release until replay is understood"
-    },
-    {
-      "scenario": "observability policy boundary",
-      "cases": 24,
-      "blocks": 2,
-      "reviews": 3,
-      "mean_severity": 1.708,
-      "mean_score": 0.2651,
-      "top_evidence_id": "ev_0099",
-      "recommended_action": "block release until replay is understood"
-    },
-    {
-      "scenario": "worker drift",
-      "cases": 24,
-      "blocks": 2,
-      "reviews": 3,
-      "mean_severity": 2.5,
-      "mean_score": 0.4057,
-      "top_evidence_id": "ev_0088",
-      "recommended_action": "block release until replay is understood"
-    },
-    {
-      "scenario": "worker evidence recall",
-      "cases": 24,
-      "blocks": 3,
-      "reviews": 3,
-      "mean_severity": 1.875,
-      "mean_score": 0.282,
+      "reviews": 5,
+      "mean_severity": 2.528,
+      "mean_score": 0.3819,
       "top_evidence_id": "ev_0066",
-      "recommended_action": "block release until replay is understood"
+      "recommended_action": "open a regression issue with trace and benchmark delta"
+    },
+    {
+      "scenario": "lives boundary probe",
+      "cases": 36,
+      "blocks": 3,
+      "reviews": 4,
+      "mean_severity": 2.528,
+      "mean_score": 0.3989,
+      "top_evidence_id": "ev_0033",
+      "recommended_action": "route to reviewer with evidence packet"
+    },
+    {
+      "scenario": "observability operator packet",
+      "cases": 36,
+      "blocks": 4,
+      "reviews": 5,
+      "mean_severity": 2.556,
+      "mean_score": 0.3807,
+      "top_evidence_id": "ev_0143",
+      "recommended_action": "accept only if decision claims cite fixture evidence"
+    },
+    {
+      "scenario": "worker evidence replay",
+      "cases": 36,
+      "blocks": 4,
+      "reviews": 5,
+      "mean_severity": 2.611,
+      "mean_score": 0.3936,
+      "top_evidence_id": "ev_0000",
+      "recommended_action": "block release until cited evidence is regenerated"
     }
   ],
   "highest_risk": {
-    "scenario": "lives gap",
-    "cases": 24,
-    "blocks": 3,
-    "reviews": 2,
-    "mean_severity": 3.333,
-    "mean_score": 0.5232,
-    "top_evidence_id": "ev_0143",
-    "recommended_action": "block release until replay is understood"
+    "scenario": "worker evidence replay",
+    "cases": 36,
+    "blocks": 4,
+    "reviews": 5,
+    "mean_severity": 2.611,
+    "mean_score": 0.3936,
+    "top_evidence_id": "ev_0000",
+    "recommended_action": "block release until cited evidence is regenerated"
   }
 }

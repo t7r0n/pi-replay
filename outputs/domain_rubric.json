@@ -1,0 +1,64 @@
+{
+  "repo": "pi-replay",
+  "company": "camelAI",
+  "rubric_axes": [
+    {
+      "axis": "worker_coverage",
+      "failures": [
+        "worker_drift"
+      ],
+      "evidence_required": true
+    },
+    {
+      "axis": "lives_risk",
+      "failures": [
+        "lives_gap"
+      ],
+      "evidence_required": true
+    },
+    {
+      "axis": "isolation_precision",
+      "failures": [
+        "isolation_misroute"
+      ],
+      "evidence_required": true
+    },
+    {
+      "axis": "observability_latency",
+      "failures": [
+        "observability_blindspot"
+      ],
+      "evidence_required": true
+    }
+  ],
+  "archetypes": [
+    {
+      "name": "worker evidence replay",
+      "trigger": "worker signal changes while lives context is stale",
+      "expected": "block release until cited evidence is regenerated"
+    },
+    {
+      "name": "lives boundary probe",
+      "trigger": "lives handoff crosses a policy or trust boundary",
+      "expected": "route to reviewer with evidence packet"
+    },
+    {
+      "name": "isolation regression harness",
+      "trigger": "isolation behavior regresses against the last accepted fixture",
+      "expected": "open a regression issue with trace and benchmark delta"
+    },
+    {
+      "name": "observability operator packet",
+      "trigger": "observability output needs a human-readable audit packet",
+      "expected": "accept only if decision claims cite fixture evidence"
+    }
+  ],
+  "sources_used": [
+    "https://github.com/qaml-ai",
+    "https://github.com/qaml-ai/pi-worker",
+    "https://github.com/qaml-ai/camelAI-docker-compose",
+    "https://www.ycombinator.com/companies/camelai",
+    "https://blog.cloudflare.com/durable-object-facets-dynamic-workers/",
+    "https://linkedin.com/in/illiana-reed"
+  ]
+}
