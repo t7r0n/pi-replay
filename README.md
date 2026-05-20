@@ -2,19 +2,39 @@
 
 A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.
 
-## Why This Exists
+![Pi Replay working dashboard](outputs/project_working.svg)
 
-pi worker lives or dies on isolation, observability, and the execute tool's reliability - but the README explicitly says the repo is "actively experimental" and only the terminal agent example is production ready. The execute tool uses Cloudflare's Dynamic Worker Loader to spin up a child Worker per code execution, but two things are missing from the public surface: (1) deterministic replay - when a pi style agent's run fails, there is no built in way to replay the exact sequence of tool calls + Worker invocations.
+## Why it exists
 
-## What It Builds
+pi worker lives or dies on isolation, observability, and the execute tool's reliability - but the README explicitly says the repo is "actively experimental" and only the terminal agent example is production ready.
 
-- Replays synthetic `worker` and `lives` cases against the project's evidence rules.
-- Scores `worker_coverage`, `lives_risk`, and `isolation_precision` so regressions are visible in CSV and JSON.
-- Plants `worker drift` and `lives gap` failures as negative controls.
-- Writes citation-locked decision claims; unsupported claims fail verification.
-- Exports a review dashboard and demo pack for `pi-replay` without hosted services.
+Most internal demos stop at a pretty chart. This repository is built around the harder part: a repeatable path from fixture, to failure, to evidence, to the operator action a serious team would actually trust.
 
-## Local Run
+## What is inside
+
+- A deterministic replay harness tuned around worker, lives, and isolation.
+- Company-specific strategy code in `src/pi_replay/strategy.py`, not just README-level customization.
+- Citation-locked reports where every decision claim has to point back to a generated evidence ID.
+- Two visual artifacts generated from the latest run: `outputs/project_working.svg` and `outputs/evidence_map.svg`.
+- A portable demo pack with JSON, CSV, Markdown, HTML, SVG, and benchmark artifacts.
+
+![Pi Replay evidence map](outputs/evidence_map.svg)
+
+## Signals it measures
+
+- `worker coverage`
+- `lives risk`
+- `isolation precision`
+- `observability latency`
+
+## Failure modes it plants
+
+- worker drift
+- lives gap
+- isolation misroute
+- observability blindspot
+
+## Run it locally
 
 ```bash
 uv sync
@@ -23,16 +43,14 @@ uv run pytest -q
 uv run ruff check .
 ```
 
-## Outputs
+## Outputs worth opening
 
-- `outputs/analysis.json`
-- `outputs/scenario_report.csv`
-- `outputs/decision_report.md`
-- `outputs/evidence_packet.md`
-- `outputs/domain_rubric.json`
-- `outputs/failure_matrix.md`
-- `outputs/trace_graph.mmd`
 - `outputs/dashboard.html`
+- `outputs/project_working.svg`
+- `outputs/evidence_map.svg`
+- `outputs/operator_brief.md`
+- `outputs/decision_report.md`
+- `outputs/strategy_model.json`
 - `outputs/demo_pack.zip`
 
 ## Sources
@@ -46,4 +64,4 @@ uv run ruff check .
 
 ## Boundary
 
-This repository uses synthetic fixtures only. It has no credentials, no customer data, no outreach data, and no dependency on a hosted API.
+Everything runs locally against synthetic fixtures. There are no credentials, no customer records, no outreach files, and no hosted API dependency.
