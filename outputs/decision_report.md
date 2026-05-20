@@ -1,6 +1,6 @@
 # Decision Report: Pi Replay
 
-A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.
+A deterministic replay + OTel tracing harness for pi worker agents — record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.
 
 ## Evidence-Grounded Findings
 

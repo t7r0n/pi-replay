@@ -1,22 +1,22 @@
 # Pi Replay
 
-A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.
+A deterministic replay + OTel tracing harness for pi worker agents — record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.
 
 ![Pi Replay working dashboard](outputs/project_working.svg)
 
 ## Why it exists
 
-pi worker lives or dies on isolation, observability, and the execute tool's reliability - but the README explicitly says the repo is "actively experimental" and only the terminal agent example is production ready.
+pi worker lives or dies on isolation, observability, and the execute tool's reliability — but the README explicitly says the repo is "actively experimental" and only the terminal agent example is production ready. The execute tool uses Cloudflare's Dynamic Worker Loader to spin up a child Worker per code execution, but two things are missing from the.
 
-Most internal demos stop at a pretty chart. This repository is built around the harder part: a repeatable path from fixture, to failure, to evidence, to the operator action a serious team would actually trust.
+The project is intentionally built as a local replay harness instead of a slide. It creates fixtures, plants realistic failure modes, produces citation-locked evidence, and turns the result into a dashboard a reviewer can inspect without credentials or hosted services.
 
 ## What is inside
 
-- A deterministic replay harness tuned around worker, lives, and isolation.
-- Company-specific strategy code in `src/pi_replay/strategy.py`, not just README-level customization.
-- Citation-locked reports where every decision claim has to point back to a generated evidence ID.
-- Two visual artifacts generated from the latest run: `outputs/project_working.svg` and `outputs/evidence_map.svg`.
-- A portable demo pack with JSON, CSV, Markdown, HTML, SVG, and benchmark artifacts.
+- Deterministic fixture generation for the company-specific risk surface.
+- Strategy code in `src/pi_replay/strategy.py` with project-specific scoring and visual evidence.
+- Citation-locked reports where every decision claim points to a generated evidence ID.
+- Two regenerated visual artifacts: `outputs/project_working.svg` and `outputs/evidence_map.svg`.
+- A portable demo pack with JSON, CSV, Markdown, HTML, SVG, benchmark, and test artifacts.
 
 ![Pi Replay evidence map](outputs/evidence_map.svg)
 

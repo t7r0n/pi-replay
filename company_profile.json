@@ -5,8 +5,8 @@
   "package": "pi_replay",
   "cli": "pi-replay",
   "title": "Pi Replay",
-  "problem": "pi worker lives or dies on isolation, observability, and the execute tool's reliability - but the README explicitly says the repo is \"actively experimental\" and only the terminal agent example is production ready. The execute tool uses Cloudflare's Dynamic Worker Loader to spin up a child Worker per code execution, but two things are missing from the public surface: (1) deterministic replay - when a pi style agent's run fails, there is no built in way to replay the exact sequence of tool calls + Worker invocations.",
-  "direction": "A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.",
+  "problem": "pi worker lives or dies on isolation, observability, and the execute tool's reliability \u2014 but the README explicitly says the repo is \"actively experimental\" and only the terminal agent example is production ready. The execute tool uses Cloudflare's Dynamic Worker Loader to spin up a child Worker per code execution, but two things are missing from the public surface: (1) deterministic replay \u2014 when a pi style agent's run fails, there is no built in way to replay the exact sequence of tool calls + Worker invocations.",
+  "direction": "A deterministic replay + OTel tracing harness for pi worker agents \u2014 record every tool call, child Worker invocation, and Durable Object state diff; replay any session bit for bit; enforce per session budgets in the Worker runtime.",
   "why": "Out of pi worker's public surface, this picks the one issue that turns an \"actively experimental\" repo into something a third party can run in production. Most contributors would do a small bug fix or feature; this picks the operability gap that camelAI's own product story rests on.",
   "terms": [
     "worker",
