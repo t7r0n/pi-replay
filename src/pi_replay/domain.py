@@ -9,36 +9,36 @@ from typing import Any
 
 RULES = json.loads(r'''{
   "metrics": [
-    "worker_coverage",
-    "lives_risk",
-    "isolation_precision",
-    "observability_latency"
+    "evidence_coverage",
+    "handoff_risk",
+    "claim_precision",
+    "review_latency"
   ],
   "failure_modes": [
-    "worker_drift",
-    "lives_gap",
-    "isolation_misroute",
-    "observability_blindspot"
+    "evidence_drift",
+    "handoff_gap",
+    "claim_misroute",
+    "review_blindspot"
   ],
   "archetypes": [
     {
-      "name": "worker evidence replay",
-      "trigger": "worker signal changes while lives context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "lives boundary probe",
-      "trigger": "lives handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "isolation regression harness",
-      "trigger": "isolation behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "observability operator packet",
-      "trigger": "observability output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ]

@@ -1,7 +1,7 @@
 [project]
 name = "pi-replay"
 version = "0.1.0"
-description = "A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, and Durable Object sta"
+description = "A deterministic replay + OTel tracing harness for pi worker agents - record every tool call, child Worker invocation, an"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [

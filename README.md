@@ -53,15 +53,6 @@ uv run ruff check .
 - `outputs/strategy_model.json`
 - `outputs/demo_pack.zip`
 
-## Sources
-
-- https://github.com/qaml-ai
-- https://github.com/qaml-ai/pi-worker
-- https://github.com/qaml-ai/camelAI-docker-compose
-- https://www.ycombinator.com/companies/camelai
-- https://blog.cloudflare.com/durable-object-facets-dynamic-workers/
-- https://linkedin.com/in/illiana-reed
-
 ## Boundary
 
 Everything runs locally against synthetic fixtures. There are no credentials, no customer records, no outreach files, and no hosted API dependency.
